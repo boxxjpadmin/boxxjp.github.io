@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Boxx.inc">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>Boxx inc.</title>
+<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="favicons/favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Mono' rel='stylesheet' type='text/css'>
+<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+<script src="js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+<script src="js/purl.js"></script>
+<script type="text/javascript">
+  $(function(){
+    var lang = $.url().param('lang');
+    if(lang === 'en'){
+      $(document.body).addClass('site-en');
+      $('.trigger-en').addClass('active');
+    } else {
+      $(document.body).addClass('site-ja');
+      $('.trigger-ja').addClass('active');
+    }
+  });
+</script>
+</head>
+<body>
+<header id="header">
+  <nav class="top-nav blue darken-2">
+    <div class="container">
+      <h1 class="page-title"><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a> <a href="/"><b>Boxx.jp</b></a> <span>&raquo; API Version 1.0</span> <span><i class="mdi-image-tag-faces"></i></span></h1>
+    </div>
+  </nav>  
+  <ul id="nav-mobile" class="side-nav fixed">
+    <li class="logo white"><a href="/"><img src="image/logo-bk.svg" alt="Boxx.inc"></a></li>
+    <li class="lang-switcher"><a href="/doc/" class="trigger-ja waves-effect waves-green btn-flat"><span>Ja</span></a><a href="/doc/?lang=en" class="trigger-en waves-effect waves-green btn-flat"><span>En</span></a></li>
+    <li><a href="#about" class="waves-effect waves-red btn-flat">About</a></li>
+    <li><a href="#showcase" class="waves-effect waves-red btn-flat">Showcase</a></li>
+    <li><a href="#news-list" class="waves-effect waves-red btn-flat">API</a>
+      <ul class="boxx-nav-nest">
+        <li><a href="#news-list" class="waves-effect waves-red btn-flat">News List</a></li>
+        <li><a href="#news-detail" class="waves-effect waves-red btn-flat">News Detail</a></li>
+        <li><a href="#works-list" class="waves-effect waves-red btn-flat">Works List</a></li>
+        <li><a href="#works-detail" class="waves-effect waves-red btn-flat">Works Detail</a></li>
+        <li><a href="#contents-list" class="waves-effect waves-red btn-flat">Contents List</a></li>
+        <li><a href="#contents-detail" class="waves-effect waves-red btn-flat">Contents Detail</a></li>
+      </ul>
+    </li>
+    <li><a href="#ribbon" class="waves-effect waves-red btn-flat">Embed Boxx ribbon</a></li>
+    <li><a href="#submit" class="waves-effect waves-red btn-flat boxx-nav-submit" style="">Submit Your Site</a></li>
+  </ul>
+</header>
+<main id="main">
+  
+  <div class="section scrollspy grey lighten-4" id="about">
+    <div class="container">
+      <h4 class="header"><i class="mdi-action-info-outline small"></i> <b>About</b></h4>
+      <div class="row">
+        <div class="col s12 lang-ja">
+          <p>BOXX の使命はクリエイターが集まるオープンプラットフォームの実現です。（APIを公開し、だれでもデザインを submit できるこのウェブサイトはそのちょっと変わった一例。）様々なメディアにおける広告のほか、ドキュメンタリーフィルムの制作やクリエイターのインデペンデント化のお手伝いもしています。</p>
+        </div>
+        <div class="col s12 lang-en">
+          <p>Our mission is to establish an open platform for creators to gather and do things differently. This website represents that doctrine by letting anyone use APIs to design their own BOXX site and submit it to us. This philosophy of openness surrounds everything we do, from creating ads in different media, to producing documentary films, to helping creators to go independent.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section container scrollspy" id="showcase">
+    <h4 class="header"><i class="mdi-image-grid-on small"></i> <b>Showcase</b></h4>
+    <div class="section">
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="image/p.png">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">coming soon <i class="mdi-navigation-more-vert right"></i></span>
+              <p><a href="#">View</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">coming soon <i class="mdi-navigation-close right"></i></span>
+              <p>coming soon.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="image/p.png">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">coming soon <i class="mdi-navigation-more-vert right"></i></span>
+              <p><a href="#">View</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">coming soon <i class="mdi-navigation-close right"></i></span>
+              <p>coming soon.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="image/p.png">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">coming soon <i class="mdi-navigation-more-vert right"></i></span>
+              <p><a href="#">View</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">coming soon <i class="mdi-navigation-close right"></i></span>
+              <p>coming soon.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section container" id="api-container">
+    <h4 class="header"><i class="mdi-image-flash-on small"></i> <b>API</b></h4>
+    <div class="row">
+      <div class="boxx-api-content col s12 scrollspy" id="news-list">
+        <h5 class="header lang-ja"><b>ニュース一覧取得</b></h5>
+        <h5 class="header lang-en"><b>News List</b></h5>
+        <p class="lang-ja">Boxx に関するニュースの一覧情報を取得します。返り値は時系列で並びます。</p>
+        <p class="lang-en">Acquire News feed info about Boxx. Returned valuables will be in time-series.</p>
+        <dl>
+          <dt><b>Method</b></dt>
+          <dd>GET</dd>
+        </dl>
+        <dl>
+          <dt><b>Endpoint</b></dt>
+          <dd><span class="boxx-hl">http://api.boxx.jp/v1/news_list</span></dd>
+        </dl>
+        <dl>
+          <dt><b>Sample Request</b></dt>
+          <dd><span class="boxx-hl">$ curl -XGET "http://api.boxx.jp/v1/news_list"</span></dd>
+        </dl>
+        <dl>
+          <dt><b>Request Parameter</b></dt>
+          <dd>
+            <table class="bordered">
+              <thead>
+                <tr>
+                  <th data-field="parameter">Parameter</th>
+                  <th data-field="value">Value</th>
+                  <th data-field="description">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>type</td>
+                  <td>json / jsonp</td>
+                  <td class="lang-ja">返ってくる形式を json か jsonp で指定します。省略時は json になります。</td>
+                  <td class="lang-en">Specify returned valuables with "json" or "jsonp". default is "json"</td>
+                </tr>
+                <tr>
+                  <td>callback</td>
+                  <td>callback</td>
+                  <td class="lang-ja">callbackの関数名を指定します。省略時は、boxx[現在時刻]となります。</td>
+                  <td class="lang-en">Specify the function name for "callback". Default is boxx[current time].</td>
+                </tr>
+              </tbody>
+            </table>
+          </dd>
+        </dl>
+        <dl>
+          <dt><b>Resonse</b></dt>
+          <dd>
+<pre><code class="json">{
+    "result": true,
+    "error": "none",
+    "news":[
+        {
+            "newsid": 2,
+            "title": {
+                "ja": "宇田川さん結婚おめでとう",
+                "en": "Happy Wedding, Udagawa-san"
+            },
+            "category": "Member",
+            "date": {
+                    "year":2015,"month":8,"day":23,
+                    "hour":16, "min":30, "sec":00,
+                    "timezone": "JST"
+                },
+            "text": {
+                "ja":"2015年、BOXX 参加メンバーは結婚ブーム。いろんなメンバーが入籍したり、入籍を控えていたり。そんな中、宇田川さんが軽井沢で結婚式を上げました。",
+                "en":"Wedding boom is taking place here at BOXX. Udagawa-san has just had a wedding ceremony at Karuizawa and Shiodome."
+            },
+            "thumbnail":{
+                "small": "null",
+                "medium": "hnull",
+                "large": "null"
+            }
+        },
+        {
+            "newsid": 1,
+            "title": {
+                "ja": "世界初？オープンプラットフォームなウェブサイト（公式）ローンチしました",
+                "en": "The world's first open platfrom website has just launched."
+            },
+            "category": "Launch",
+            "date": {
+                    "year":2016,"month":1,"day":1,
+                    "hour":0, "min":00, "sec":00,
+                    "timezone": "JST"
+                },
+            "text": {
+                "ja":"プロジェクトごとに、最適なチームを組む BOXX の流動的なあり方を、そのままサイトにしました。プログラムが書ける方であれば、API を利用してどなたでも Boxx のオフィシャルサイトをデザイン可能です。あなたも、おひとついかがですか？",
+                "en":"Here at BOXX we keep ourselves very fluid, allowing us to form the best team for any given assignment. The same is true of this website. If you can program, then you can design your own BOXX site with APIs. How about designing one today?"
+            },
+            "thumbnail":{
+                "small": "http://www.boxx.com/image/news1_s.jpg",
+                "medium": "http://www.boxx.com/image/news2_m.jpg",
+                "large": "http://www.boxx.com/image/news3_l.jpg"
+            }
+        }
+    ]
+}</code></pre>
+          </dd>
+        </dl>
+      </div>
+      
+      <div class="boxx-api-content col s12 scrollspy" id="news-detail">
+        <h5 class="header lang-ja"><b>ニュース詳細取得</b></h5>
+        <h5 class="header lang-en"><b>News Detail</b></h5>
+        <p class="lang-ja">Boxx に関するニュースの詳細情報を取得します。必須パラメータは newsid で、news_list で取得したものを利用します。</p>
+        <p class="lang-en">Acquire News Detail about Boxx. Required parameter is "newsid", which uses valuables aquired from "news_list".</p>
+        <dl>
+          <dt><b>Method</b></dt>
+          <dd>GET</dd>
+        </dl>
+        <dl>
+          <dt><b>Endpoint</b></dt>
+          <dd><span class="boxx-hl">http://api.boxx.jp/v1/news_detail</span></dd>
+        </dl>
+        <dl>
+          <dt><b>Sample Request</b></dt>
+          <dd><span class="boxx-hl">$ curl -XGET "http://api.boxx.jp/v1/news_detail?newsid=1"</span></dd>
+        </dl>
+        <dl>
+          <dt><b>Request Parameter</b></dt>
+          <dd>
+            <table class="bordered">
+              <thead>
+                <tr>
+                  <th data-field="parameter">Parameter</th>
+                  <th data-field="value">Value</th>
+                  <th data-field="description">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>newsid</td>
+                  <td>1</td>
+                  <td class="lang-ja">必須。news_listで取得した newsid を指定します。</td>
+                  <td class="lang-en">Required. Specify "newsid",  which uses valuables aquiered from "news_list".</td>
+                </tr>
+                <tr>
+                  <td>type</td>
+                  <td>json / jsonp</td>
+                  <td class="lang-ja">返ってくる形式を json か jsonp で指定します。省略時は json になります。</td>
+                  <td class="lang-en">Specify returned valuables with "json" or "jsonp". default is "json"</td>
+                </tr>
+                <tr>
+                  <td>callback</td>
+                  <td>callback</td>
+                  <td class="lang-ja">callbackの関数名を指定します。省略時は、boxx[現在時刻]となります。</td>
+                  <td class="lang-en">Specify the function name for "callback". Default is boxx[current time].</td>
+                </tr>
+              </tbody>
+            </table>
+          </dd>
+        </dl>
+        <dl>
+          <dt><b>Resonse</b></dt>
+          <dd>
+<pre><code class="json">{
+    "result": true,
+    "error": "none",
+    "news": {
+        "newsid": 1,
+        "title": {
+            "ja": "世界初？オープンプラットフォームなウェブサイト（公式）ローンチしました",
+            "en": "The world's first open platfrom website has just launched."
+        },
+        "category": "Launch",
+        "date": {
+                "year":2016,"month":1,"day":1,
+                "hour":0, "min":00, "sec":00,
+                "timezone": "JST"
+            },
+        "text": {
+            "ja":"プロジェクトごとに、最適なチームを組む BOXX の流動的なあり方を、そのままサイトにしました。プログラムが書ける方であれば、API を利用してどなたでも Boxx のオフィシャルサイトをデザイン可能です。あなたも、おひとついかがですか？",
+            "en":"Here at BOXX we keep ourselves very fluid, allowing us to form the best team for any given assignment. The same is true of this website. If you can program, then you can design your own BOXX site with APIs. How about designing one today?"
+        },
+        "thumbnail":{
+            "small": "http://www.boxx.com/image/news01_s.jpg",
+            "medium": "http://www.boxx.com/image/news01_m.jpg",
+            "large": "http://www.boxx.com/image/news01_l.jpg"
+        }
+    }
+}</code></pre>
+          </dd>
+        </dl>
+      </div>
+
+      <div class="boxx-api-content col s12 scrollspy" id="works-list">
+        <h5 class="header lang-ja"><b>仕事一覧取得</b></h5>
+        <h5 class="header lang-en"><b>Works List</b></h5>
+        <p class="lang-ja">Boxx に関する仕事の一覧情報を取得します。返り値は入力順で並びます。</p>
+        <p class="lang-en">Aquire the list of Boxx works. Returned valuables will be in entry sequence.</p>
+        <dl>
+          <dt><b>Method</b></dt>
+          <dd>GET</dd>
+        </dl>
+        <dl>
+          <dt><b>Endpoint</b></dt>
+          <dd><span class="boxx-hl">http://api.boxx.jp/v1/works_list</span></dd>
+        </dl>
+        <dl>
+          <dt><b>Sample Request</b></dt>
+          <dd><span class="boxx-hl">$ curl -XGET "http://api.boxx.jp/v1/works_list"</span></dd>
+        </dl>
+        <dl>
+          <dt><b>Request Parameter</b></dt>
+          <dd>
+            <table class="bordered">
+              <thead>
+                <tr>
+                  <th data-field="parameter">Parameter</th>
+                  <th data-field="value">Value</th>
+                  <th data-field="description">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>type</td>
+                  <td>json / jsonp</td>
+                  <td class="lang-ja">返ってくる形式を json か jsonp で指定します。省略時は json になります。</td>
+                  <td class="lang-en">Specify returned valuables with "json" or "jsonp". default is "json"</td>
+                </tr>
+                <tr>
+                  <td>callback</td>
+                  <td>callback</td>
+                  <td class="lang-ja">callbackの関数名を指定します。省略時は、boxx[現在時刻]となります。</td>
+                  <td class="lang-en">Specify the function name for "callback". Default is boxx[current time].</td>
+                </tr>
+              </tbody>
+            </table>
+          </dd>
+        </dl>
+        <dl>
+          <dt><b>Resonse</b></dt>
+          <dd>
+<pre><code class="json">{
+    "result": true,
+    "error": "none",
+    "works": [
+        {
+            "workid": 1,
+            "title": {
+                "ja": "Google さがそう 「踏み出そう。2015」",
+                "en": "Google Sagasou -Search On- "New Challenge""
+            },
+            "category": "TVCM",
+            "country": "Japan",
+            "launch": {
+                    "year":2015,"month":1,"day":1,
+                    "timezone": "JST"
+            },
+            "thumbnail":{
+                "small": "http://www.boxx.com/image/works1_s.jpg",
+                "medium": "http://www.boxx.com/image/works1_m.jpg",
+                "large": "http://www.boxx.com/image/works1_l.jpg"
+            }
+        },
+        {
+            "workid": 2,
+            "title": {
+                "ja": "Google 新商品発表会 on 4/1",
+                "en": "Google New Product Announcement on 4/1"
+            },
+            "category": "WebFilm",
+            "country": "Japan",
+            "launch": {
+                    "year":2015,"month":4,"day":1,
+                    "timezone": "JST"
+            },
+            "thumbnail":{
+                "small": "http://www.boxx.com/image/works2_s.jpg",
+                "medium": "http://www.boxx.com/image/works2_m.jpg",
+                "large": "http://www.boxx.com/image/works2_l.jpg"
+            }
+        }
+    ]
+}</code></pre>
+          </dd>
+        </dl>
+      </div>
+      
+      <div class="boxx-api-content col s12 scrollspy" id="works-detail">
+        <h5 class="header lang-ja"><b>仕事詳細取得</b></h5>
+        <h5 class="header lang-en"><b>Works Detail</b></h5>
+        <p class="lang-ja">Boxx に関する案件の詳細情報を取得します。必須パラメータは worksid で、news_list で取得したものを利用します。</p>
+        <p class="lang-en">Acquire Work Detail about Boxx. Required parameter is "worksid", which uses valuables aquired from "works_list".</p>
+        <dl>
+          <dt><b>Method</b></dt>
+          <dd>GET</dd>
+        </dl>
+        <dl>
+          <dt><b>Endpoint</b></dt>
+          <dd><span class="boxx-hl">http://api.boxx.jp/v1/works_detail</span></dd>
+        </dl>
+        <dl>
+          <dt><b>Sample Request</b></dt>
+          <dd><span class="boxx-hl">$ curl -XGET "http://api.boxx.jp/v1/works_detail?worksid=1"</span></dd>
+        </dl>
+        <dl>
+          <dt><b>Request Parameter</b></dt>
+          <dd>
+            <table class="bordered">
+              <thead>
+                <tr>
+                  <th data-field="parameter">Parameter</th>
+                  <th data-field="value">Value</th>
+                  <th data-field="description">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>worksid</td>
+                  <td>1</td>
+                  <td class="lang-ja">必須。works_listで取得した worksid を指定します。</td>
+                  <td class="lang-en">Required. Specify "worksid",  which uses valuables aquiered from "works_list".</td>
+                </tr>
+                <tr>
+                  <td>type</td>
+                  <td>json / jsonp</td>
+                  <td class="lang-ja">返ってくる形式を json か jsonp で指定します。省略時は json になります。</td>
+                  <td class="lang-en">Specify returned valuables with "json" or "jsonp". default is "json"</td>
+                </tr>
+                <tr>
+                  <td>callback</td>
+                  <td>callback</td>
+                  <td class="lang-ja">callbackの関数名を指定します。省略時は、boxx[現在時刻]となります。</td>
+                  <td class="lang-en">Specify the function name for "callback". Default is boxx[current time].</td>
+                </tr>
+              </tbody>
+            </table>
+          </dd>
+        </dl>
+        <dl>
+          <dt><b>Resonse</b></dt>
+          <dd>
+<pre><code class="json">{
+    "result": true,
+    "error": "none",
+    "work": {
+        "workid": 3,
+        "title": {
+            "ja": "Google Discover Shibuya",
+            "en": "Google Discover Shibuya"
+        },
+        "category": "Event",
+        "country": "Japan",
+        "launch": {
+                "year":2015,"month":8,"day":25,
+                "timezone": "JST"
+            },
+        "description": {
+            "ja":"Discover Shibuya のイベントは、「渋谷をもっと見つけよう」のコンセプトのもと、Google 検索を使ってお店とお客さんとをもっとつなぐための取り組みです。ハチ公前に巨大な検索画面が現れたほか、「Google 検索で、来てください」と渋谷のお店が呼びかける Movie が、スクランブル交差点のビジョンで流されました。",
+            "en":"With Google's Search technology, we helped Shibuya Dogenzaka Shopping Street Association guide visitors to discover shops and restaurants in Shibuya more easily. A big Search screen appears in front of the iconic Shibuy Scrumble Intersection. Also over OOH visions, we screen videos of shops’ and restaurants’ staff inviting passers-by to search with Google on their mobile device to find their locations."
+        },
+        "thumbnail":{
+            "small": "http://www.boxx.com/image/works3_s.jpg",
+            "medium": "http://www.boxx.com/image/works3_m.jpg",
+            "large": "http://www.boxx.com/image/works3_l.jpg"
+        },
+        "image":[
+            {
+                "small": "http://www.boxx.com/image/works3_img01_s.jpg",
+                "medium": "http://www.boxx.com/image/works3_img01_m.jpg",
+                "large": "http://www.boxx.com/image/works3_img01_l.jpg"
+            },
+            {
+                "small": "http://www.boxx.com/image/works3_img02_s.jpg",
+                "medium": "http://www.boxx.com/image/works3_img02_m.jpg",
+                "large": "http://www.boxx.com/image/works3_img02_l.jpg"
+            }
+        ],
+        "movie":[
+            {
+                "type": "youtube",
+                "url": "https://youtu.be/oGB7DawgJwQ"
+            }
+        ],
+    }
+}</code></pre>
+          </dd>
+        </dl>
+      </div>
+     
+
+      <div class="boxx-api-content col s12 scrollspy" id="contents-list">
+        <h5 class="header lang-ja"><b>ページ一覧取得</b></h5>
+        <h5 class="header lang-en"><b>Contents List</b></h5>
+        <p class="lang-ja">Works、News以外のページ情報の一覧を取得します。</p>
+        <p class="lang-en">Acquire contents list expert for news and works.</p>
+        <dl>
+          <dt><b>Method</b></dt>
+          <dd>GET</dd>
+        </dl>
+        <dl>
+          <dt><b>Endpoint</b></dt>
+          <dd><span class="boxx-hl">http://api.boxx.jp/v1/contents_list</span></dd>
+        </dl>
+        <dl>
+          <dt><b>Sample Request</b></dt>
+          <dd><span class="boxx-hl">$ curl -XGET "http://api.boxx.jp/v1/contents_list"</span></dd>
+        </dl>
+        <dl>
+          <dt><b>Request Parameter</b></dt>
+          <dd>
+            <table class="bordered">
+              <thead>
+                <tr>
+                  <th data-field="parameter">Parameter</th>
+                  <th data-field="value">Value</th>
+                  <th data-field="description">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>type</td>
+                  <td>json / jsonp</td>
+                  <td class="lang-ja">返ってくる形式を json か jsonp で指定します。省略時は json になります。</td>
+                  <td class="lang-en">Specify returned valuables with "json" or "jsonp". default is "json"</td>
+                </tr>
+                <tr>
+                  <td>callback</td>
+                  <td>callback</td>
+                  <td class="lang-ja">callbackの関数名を指定します。省略時は、boxx[現在時刻]となります。</td>
+                  <td class="lang-en">Specify the function name for "callback". Default is boxx[current time].</td>
+                </tr>
+              </tbody>
+            </table>
+          </dd>
+        </dl>
+        <dl>
+          <dt><b>Resonse</b></dt>
+          <dd>
+<pre><code class="json">{
+    "result": true,
+    "error": "none",
+    "contents": [
+        {
+            "pageid": 1,
+            "title": {
+                "ja": "Boxx について",
+                "en": "About Us"
+            },
+            "url": "http://www.boxx.com/about/",
+            "thumbnail":{
+                "small": "http://www.boxx.com/image/test_s.jpg",
+                "medium": "http://www.boxx.com/image/test_m.jpg",
+                "large": "http://www.boxx.com/image/test_l.jpg"
+            }
+        },
+        {
+            "pageid": 2,
+            "title": {
+                "ja": "お問い合せ",
+                "en": "Contact"
+            },
+            "url": "http://www.boxx.com/contact/",
+            "thumbnail":{
+                "small": "http://www.boxx.com/image/test_s.jpg",
+                "medium": "http://www.boxx.com/image/test_m.jpg",
+                "large": "http://www.boxx.com/image/test_l.jpg"
+            }
+        }
+    ]
+}</code></pre>
+          </dd>
+        </dl>
+      </div>
+      
+      <div class="boxx-api-content col s12 scrollspy" id="contents-detail">
+        <h5 class="header lang-ja"><b>ページ詳細取得</b></h5>
+        <h5 class="header lang-en"><b>Contents Detail</b></h5>
+        <p class="lang-ja">ページ内の情報を取得します。必須パラメータは pageid で、contents_list で取得したものを利用します。</p>
+        <p class="lang-en">Acquire Contents Detail. Required parameter is "pageid", which uses valuables aquired from "contents_list".</p>
+        <dl>
+          <dt><b>Method</b></dt>
+          <dd>GET</dd>
+        </dl>
+        <dl>
+          <dt><b>Endpoint</b></dt>
+          <dd><span class="boxx-hl">http://api.boxx.jp/v1/contents_detail</span></dd>
+        </dl>
+        <dl>
+          <dt><b>Sample Request</b></dt>
+          <dd><span class="boxx-hl">$ curl -XGET "http://api.boxx.jp/v1/contents_detail?pageid=1"</span></dd>
+        </dl>
+        <dl>
+          <dt><b>Request Parameter</b></dt>
+          <dd>
+            <table class="bordered">
+              <thead>
+                <tr>
+                  <th data-field="parameter">Parameter</th>
+                  <th data-field="value">Value</th>
+                  <th data-field="description">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>pageid</td>
+                  <td>1</td>
+                  <td class="lang-ja">必須。pageid を指定します。</td>
+                  <td class="lang-en">Required. Specify "pageid".</td>
+                </tr>
+                <tr>
+                  <td>type</td>
+                  <td>json / jsonp</td>
+                  <td class="lang-ja">返ってくる形式を json か jsonp で指定します。省略時は json になります。</td>
+                  <td class="lang-en">Specify returned valuables with "json" or "jsonp". default is "json"</td>
+                </tr>
+                <tr>
+                  <td>callback</td>
+                  <td>callback</td>
+                  <td class="lang-ja">callbackの関数名を指定します。省略時は、boxx[現在時刻]となります。</td>
+                  <td class="lang-en">Specify the function name for "callback". Default is boxx[current time].</td>
+                </tr>
+              </tbody>
+            </table>
+          </dd>
+        </dl>
+        <dl>
+          <dt><b>Resonse</b></dt>
+          <dd>
+<pre><code class="json"># About Us - http://api.boxx.jp/v1/contents_detail?pageid=1
+  
+{
+    "result": true,
+    "error": "none",
+    "contents": {
+        "pageid": 1,
+        "title": {
+            "ja": "Boxx について",
+            "en": "About Us"
+        },
+        "url": "http://www.boxx.com/about/",
+        "thumbnail":{
+            "small": "http://www.boxx.com/image/about_s.jpg",
+            "medium": "http://www.boxx.com/image/about_m.jpg",
+            "large": "http://www.boxx.com/image/about_l.jpg"
+        },
+        "text": {
+            "ja":"BOXX の使命はクリエイターが集まるオープンプラットフォームの実現です。（APIを公開し、だれでもデザインを submit できるこのウェブサイトはそのちょっと変わった一例。）様々なメディアにおける広告のほか、ドキュメンタリーフィルムの制作やクリエイターのインデペンデント化のお手伝いもしています。",
+            "en":"Our mission is to establish an open platform for creators to gather and do things differently. This website represents that doctrine by letting anyone use APIs to design their own BOXX site and submit it to us. This philosophy of openness surrounds everything we do, from creating ads in different media, to producing documentary films, to helping creators to go independent."
+        }
+    }
+}</code></pre>
+          </dd>
+          <dd>
+<pre><code class="json"># Contact - http://api.boxx.jp/v1/contents_detail?pageid=2
+  
+{
+    "result": true,
+    "error": "none",
+    "contents": {
+        "pageid": 2,
+        "title": {
+            "ja": "お問い合わせ",
+            "en": "Contact"
+        },
+        "url": "http://www.boxx.com/about/",
+        "thumbnail":{
+            "small": "null",
+            "medium": "null",
+            "large": "null"
+        },
+        "text": {
+            "ja":"お問い合わせ:info@boxx.jp",
+            "en":"Contact:info@boxx.jp"
+        }
+    }
+}</code></pre>
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <div class="section container scrollspy" id="ribbon">
+    <h4 class="header"><i class="mdi-action-bookmark-outline small"></i> <b>Embed Boxx Ribbon</b></h4>
+    <p>     <td class="lang-ja">Boxx.jpのAPIを利用して制作したサイトには、こちらのリボンを設置してください。</td>
+                  <td class="lang-en">Please use this ribbon for the BOXX site you designed. </td></p>
+    <div class="row">
+      <div class="col s12">
+        <pre><code class="html">&lt;script type=&quot;text/javascript&quot; src=&quot;http://boxx.jp/parts/boxx.js&quot; id=&quot;boxxjs&quot;&gt;&lt;/script&gt;</code></pre>
+      </div>
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-image">
+            <img src="image/ribbon.png">
+          </div>
+          <div class="card-content">
+            <p>Ribbon</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-image">
+            <img src="image/ribbon-image.png">
+          </div>
+          <div class="card-content">
+            <p>Embed Sample</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section scrollspy red lighten-4" id="submit">
+    <div class="container">
+      <h4 class="header"><i class="mdi-content-send small"></i> <b>Submit Your Site</b></h4>
+            <div class="col s12 lang-ja">
+          <p>APIを使ってあなたが作ったBoxxサイトを教えてください。作ったBoxxサイトは、<a href="https://github.com/boxxjp/boxxjp.github.io" target="_blank">github</a>でbranchを作ってpushしてください。push後にgithubアカウントを<a href="mailto:info@boxx.jp">info@boxx.jp</a>までメールしてください。</p>
+        </div>
+        <div class="col s12 lang-en">
+          <p>lease submit the BOXX site you designed to us. Use the code of <a href="https://github.com/boxxjp/boxxjp.github.io" target="_blank">github</a> and create a branch then push. After the push, send your github account to <a href="mailto:info@boxx.jp">info@boxx.jp</a>. </p>
+      
+      
+    </div>
+    </div>
+  </div>
+</main>
+<footer id="footer" class="page-footer white">
+  <div class="footer-copyright">
+    <div class="container black-text">
+    Contact: <a href="mailto:info@boxx.jp">info@boxx.jp</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

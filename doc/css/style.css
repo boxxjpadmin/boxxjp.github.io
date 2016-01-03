@@ -1,0 +1,232 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+html{
+  font-family: 'Roboto', "游ゴシック","YuGothic","Helvetica Neue","Helvetica","Arial","Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro","ＭＳ ゴシック",sans-serif;
+  font-size: 12px;
+  -webkit-text-size-adjust: 100%;
+}
+.boxx-text-ja{
+  line-height: 1.8;
+} 
+i{
+  height: auto !important;
+  line-height: 1 !important;
+}
+code{
+  border-radius: 3px;
+}
+
+
+#header,
+#main,
+#footer{
+  padding-left: 240px;
+}
+@media only screen and (max-width : 992px) {
+  #header .top-nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 997;
+  }
+  #main{
+    margin-top: 60px;
+  }
+  #header,
+  #main,
+  #footer {
+    padding-left: 0;
+  }
+  .container {
+    padding: 0;
+  }
+}
+#header .top-nav{
+  height: 93px;
+}
+#header .top-nav h1{
+  font-size: 2.28rem;
+  margin: 0;
+  line-height: 93px;
+}
+#header .top-nav h1 a,
+#header .top-nav h1 span{
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+  height: auto;
+  line-height: 1;
+}
+#header .top-nav h1 .button-collapse{
+  margin-right: 10px;
+}
+#header .top-nav h1 .button-collapse{
+  display: none;
+}
+@media only screen and (max-width : 992px) {
+  #header .top-nav{
+    height: 60px;
+  }
+  #header .top-nav h1{
+    font-size: 1.6rem;
+    line-height: 60px;
+  }
+  #header .top-nav h1 .button-collapse{
+    display: inline-block;
+  }
+}
+#header .side-nav.fixed{
+  -webkit-overflow-scrolling: touch;
+}
+#header .side-nav.fixed .logo a{
+  height: auto;
+  line-height: 1;
+  padding: 30px;
+  border-bottom: solid 1px #eeeeee;
+}
+#header .side-nav.fixed .logo a img{
+  width: 100%; 
+}
+#header .side-nav.fixed li {
+  padding: 0;
+  background-color: transparent;
+}
+#header .side-nav.fixed li a{
+  padding: 0 30px;
+  height: 40px;
+  line-height: 40px;
+  text-transform: capitalize;
+}
+#header .side-nav.fixed li a.active{
+  background-color: #eeeeee; 
+}
+#header .side-nav.fixed .boxx-nav-nest a{
+  padding: 0 30px 0 45px;
+}
+#header .side-nav.fixed .boxx-nav-nest a:before{
+  content: "- "
+}
+#header .side-nav.fixed .boxx-nav-submit{
+  color: #e57373;
+}
+#header .side-nav.fixed li.lang-switcher {
+  border-bottom: solid 1px #eeeeee;
+}
+#header .side-nav.fixed li.lang-switcher a {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  padding: 0;
+  border-radius: 0;
+}
+#header .side-nav.fixed li.lang-switcher a.active {
+  background-color: #000000;
+  color: #ffffff;  
+}
+#header .side-nav.fixed li.lang-switcher a span {
+  padding: 0 30px;
+}
+
+
+
+#about .tabs .tab a.active{
+  color: #d32f2f !important;
+}
+#about .tabs .indicator{
+  background-color: #e53935;
+}
+
+
+
+#api-container table,
+#api-container table th,
+#api-container table tr,
+#api-container table td{
+  border: 1px solid #d0d0d0;
+}
+#api-container table th{
+  border-bottom-width: 2px;
+}
+#api-container dl{
+  margin-top: 2rem;
+}
+#api-container dl dd{
+  margin: 10px 0 0 0; 
+  width: 100%;
+}
+#api-container dl dd .boxx-hl{
+  display: block; 
+}
+#api-container .boxx-hl{
+  word-break: break-all;
+  background-color: #f5f5f5;
+  border: solid 1px #d0d0d0;
+  padding: 3px 6px;
+  border-radius: 3px;
+  display: inline-block;
+  font-family: 'Roboto Mono', "游ゴシック","YuGothic","Helvetica Neue","Helvetica","Arial","Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro","ＭＳ ゴシック",sans-serif;
+}
+#api-container code{
+  border: solid 1px #eeeeee;
+  padding: 14px;
+}
+#api-container pre code{
+  font-family: 'Roboto Mono', "游ゴシック","YuGothic","Helvetica Neue","Helvetica","Arial","Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro","ＭＳ ゴシック",sans-serif;
+}
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #263238;
+  color: #eeeeee;
+  -webkit-text-size-adjust: none;
+}
+.hljs-attribute{
+  color: #cddc39;
+}
+.hljs-value{
+  color: #00bcd4;
+}
+.hljs-literal{
+  color: #cccccc;
+}
+#api-container .boxx-api-content{
+  border-top: solid 2px #212121;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+#api-container .boxx-api-content:first-child{
+  margin-top: 10px;
+}
+
+
+
+#showcase .card .card-title,
+#showcase .card .card-content .card-title{
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+#showcase .card .card-content p{
+  margin-top: 10px;
+}
+
+
+footer.page-footer{
+  margin-top: 0;
+}
+#footer.page-footer{
+  padding-top: 0;
+}
+
+.site-ja .lang-en{
+  display: none;
+}
+.site-en .lang-ja{
+  display: none;
+}
